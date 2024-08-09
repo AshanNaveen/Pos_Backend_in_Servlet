@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lk.ijse.pos_backend.bo.BoFactory;
 import lk.ijse.pos_backend.bo.custom.CustomerBo;
 import lk.ijse.pos_backend.bo.custom.impl.CustomerBoImpl;
 import lk.ijse.pos_backend.dto.CustomerDTO;
@@ -23,7 +24,7 @@ public class CustomerController extends HttpServlet {
 
     static Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
-    CustomerBo customerBo = new CustomerBoImpl();
+    CustomerBo customerBo = BoFactory.getInstance().getBo(BoFactory.BoType.CUSTOMER);
 
     Jsonb jsonb = JsonbBuilder.create();
 
