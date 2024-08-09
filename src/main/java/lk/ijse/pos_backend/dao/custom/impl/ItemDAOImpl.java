@@ -66,4 +66,9 @@ public class ItemDAOImpl implements ItemDAO {
         }
         return null;
     }
+
+    @Override
+    public boolean updateqty(String id, int qty) throws SQLException {
+        return CrudUtil.crudUtil("UPDATE Item SET qty=qty-? WHERE id=?",qty,id);
+    }
 }

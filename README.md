@@ -42,9 +42,9 @@ The backend of the POS system is developed using Java Servlets to manage the cor
     ```
 - #### Set Up the Database
 
-  Create a MySQL database for the POS system.
-  Import the schema.sql file provided in the /db folder to set up the database schema.
-  Configure the Database Connection
+  ##### Create a MySQL database for the POS system.
+  Import the schema.sql file provided in the `src/main/resources` folder to set up the database schema.
+  ##### Configure the Database Connection
 
   Open the `context.xml` file in the `src/main/webapp/META-INF/context.xml` directory.
   Update the database URL, username, and password with your MySQL database credentials.

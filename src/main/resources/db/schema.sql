@@ -1,17 +1,16 @@
-create
-database pos_servlet_ijse;
+create database if not exists pos_servlet_ijse;
 
-use
-pos_servlet_ijse;
 
-create table customer
+use pos_servlet_ijse;
+
+create table if not exists customer
 (
     id      varchar(40) primary key,
     name    varchar(50),
     address varchar(50)
 );
 
-create table item
+create table if not exists item
 (
     id    varchar(40) primary key,
     name  varchar(50),
@@ -19,14 +18,14 @@ create table item
     qty   int
 );
 
-create table orders
+create table  if not exists orders
 (
     id    varchar(40) primary key,
     date  date,
     total decimal(8, 2)
 );
 
-create table order_detail
+create table if not exists order_detail
 (
     order_id   varchar(40),
     item_id    varchar(40),
